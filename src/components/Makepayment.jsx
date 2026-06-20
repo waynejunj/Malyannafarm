@@ -22,7 +22,7 @@ const Makepayment = () => {
             formdata.append("amount", product.product_cost)
 
             const response = await axios.post("https://kbenkamotho.alwaysdata.net/api/mpesa_payment", formdata)
-            setSuccess("Payment request sent! Check your phone for M-Pesa prompt.")
+            setSuccess(response.data.message)
             setLoading("")
             setPhone("")
         } catch (error) {

@@ -28,7 +28,7 @@ const Signup = () => {
             const response = await axios.post("http://wangui-hsk.alwaysdata.net/api/signup", formData)
 
             setLoading("")
-            setSuccess("Account created successfully!")
+            setSuccess(response.data.success)
             
             // Clear form
             setUsername("")
