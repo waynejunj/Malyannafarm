@@ -18,7 +18,7 @@ const Getproducts = () => {
   const fetchProducts = async () => {
     setLoading("Loading products...")
     try {
-        const response = await axios.get("http://wangui-hsk.alwaysdata.net/api/getproducts")
+        const response = await axios.get("https://wangui-hsk.alwaysdata.net/api/getproducts")
         setProducts(response.data.products)
         setLoading("")
     } catch (error) {
