@@ -1,0 +1,83 @@
+.notfound {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("../../public/images/mountain.jpg");
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.notfound-card {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: 50px 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #ff4d4d;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 0 5px 15px rgba(255, 12, 12, 0.4);
+}
+
+.notfound-card h2 {
+  color: white;
+  font-size: 2rem;
+  margin: 20px 0 10px;
+}
+
+.notfound-card p {
+  color: #e5e5e5;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.mylink {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #6c63ff;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.mylink:hover {
+  background: #564dff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 5rem;
+  }
+
+  .notfound-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .notfound-card {
+    padding: 35px 25px;
+  }
+}

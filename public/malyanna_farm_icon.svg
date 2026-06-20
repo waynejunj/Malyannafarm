@@ -1,0 +1,122 @@
+<svg width="520" height="520" viewBox="0 0 680 520" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Sokogarden Farms Icon</title>
+  <desc>A circular farm company logo with a barn, wheat stalks, rolling hills, and sun rays in earthy tones</desc>
+  <defs>
+    <clipPath id="circle-clip">
+      <circle cx="340" cy="260" r="220"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="340" cy="260" r="226" fill="#3B6D11" opacity="0.12"/>
+  <circle cx="340" cy="260" r="220" fill="#F5F0E8"/>
+  <circle cx="340" cy="260" r="220" fill="none" stroke="#3B6D11" stroke-width="8"/>
+
+  <!-- Sky background -->
+  <g clip-path="url(#circle-clip)">
+    <rect x="120" y="40" width="440" height="280" fill="#E8F4E8"/>
+
+    <!-- Sun -->
+    <circle cx="340" cy="140" r="38" fill="#EF9F27" opacity="0.9"/>
+
+    <!-- Sun rays -->
+    <g stroke="#EF9F27" stroke-width="3" stroke-linecap="round" opacity="0.6">
+      <line x1="340" y1="88" x2="340" y2="74"/>
+      <line x1="371" y1="97" x2="381" y2="86"/>
+      <line x1="385" y1="128" x2="399" y2="124"/>
+      <line x1="376" y1="161" x2="388" y2="169"/>
+      <line x1="309" y1="97" x2="299" y2="86"/>
+      <line x1="295" y1="128" x2="281" y2="124"/>
+      <line x1="304" y1="161" x2="292" y2="169"/>
+      <line x1="340" y1="178" x2="340" y2="192"/>
+    </g>
+
+    <!-- Rolling hills background -->
+    <path d="M120 340 Q220 260 340 300 Q460 340 560 280 L560 480 L120 480Z" fill="#639922" opacity="0.35"/>
+    <path d="M120 370 Q230 310 360 340 Q470 365 560 320 L560 480 L120 480Z" fill="#639922" opacity="0.55"/>
+
+    <!-- Ground base -->
+    <rect x="120" y="400" width="440" height="80" fill="#BA7517" opacity="0.3"/>
+    <rect x="120" y="420" width="440" height="60" fill="#97C459" opacity="0.5"/>
+
+    <!-- Barn body -->
+    <rect x="288" y="290" width="104" height="110" rx="2" fill="#993C1D"/>
+    <!-- Barn roof -->
+    <polygon points="278,295 402,295 340,240" fill="#712B13"/>
+    <!-- Barn door -->
+    <rect x="318" y="345" width="24" height="55" rx="2" fill="#4A1B0C"/>
+    <rect x="342" y="345" width="24" height="55" rx="2" fill="#4A1B0C"/>
+    <line x1="340" y1="345" x2="340" y2="400" stroke="#712B13" stroke-width="1.5"/>
+    <!-- Barn windows -->
+    <rect x="298" y="308" width="22" height="22" rx="2" fill="#FAC775" opacity="0.9"/>
+    <rect x="360" y="308" width="22" height="22" rx="2" fill="#FAC775" opacity="0.9"/>
+    <line x1="309" y1="308" x2="309" y2="330" stroke="#993C1D" stroke-width="1.5"/>
+    <line x1="298" y1="319" x2="320" y2="319" stroke="#993C1D" stroke-width="1.5"/>
+    <line x1="371" y1="308" x2="371" y2="330" stroke="#993C1D" stroke-width="1.5"/>
+    <line x1="360" y1="319" x2="382" y2="319" stroke="#993C1D" stroke-width="1.5"/>
+
+    <!-- Fence left -->
+    <rect x="220" y="375" width="5" height="35" rx="2" fill="#BA7517"/>
+    <rect x="240" y="375" width="5" height="35" rx="2" fill="#BA7517"/>
+    <rect x="260" y="375" width="5" height="35" rx="2" fill="#BA7517"/>
+    <line x1="218" y1="383" x2="267" y2="383" stroke="#BA7517" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="218" y1="395" x2="267" y2="395" stroke="#BA7517" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Fence right -->
+    <rect x="415" y="375" width="5" height="35" rx="2" fill="#BA7517"/>
+    <rect x="435" y="375" width="5" height="35" rx="2" fill="#BA7517"/>
+    <rect x="455" y="375" width="5" height="35" rx="2" fill="#BA7517"/>
+    <line x1="413" y1="383" x2="462" y2="383" stroke="#BA7517" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="413" y1="395" x2="462" y2="395" stroke="#BA7517" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Wheat left 1 -->
+    <line x1="200" y1="420" x2="196" y2="330" stroke="#BA7517" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="196" cy="324" rx="4" ry="10" fill="#EF9F27" transform="rotate(-10 196 324)"/>
+    <ellipse cx="192" cy="336" rx="3" ry="7" fill="#EF9F27" transform="rotate(15 192 336)"/>
+    <ellipse cx="200" cy="335" rx="3" ry="7" fill="#EF9F27" transform="rotate(-15 200 335)"/>
+
+    <!-- Wheat left 2 -->
+    <line x1="218" y1="420" x2="222" y2="335" stroke="#BA7517" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="222" cy="329" rx="4" ry="10" fill="#EF9F27" transform="rotate(8 222 329)"/>
+    <ellipse cx="218" cy="341" rx="3" ry="7" fill="#EF9F27" transform="rotate(12 218 341)"/>
+    <ellipse cx="226" cy="341" rx="3" ry="7" fill="#EF9F27" transform="rotate(-12 226 341)"/>
+
+    <!-- Wheat right 1 -->
+    <line x1="464" y1="420" x2="460" y2="330" stroke="#BA7517" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="460" cy="324" rx="4" ry="10" fill="#EF9F27" transform="rotate(-8 460 324)"/>
+    <ellipse cx="456" cy="336" rx="3" ry="7" fill="#EF9F27" transform="rotate(14 456 336)"/>
+    <ellipse cx="464" cy="336" rx="3" ry="7" fill="#EF9F27" transform="rotate(-14 464 336)"/>
+
+    <!-- Wheat right 2 -->
+    <line x1="482" y1="420" x2="486" y2="335" stroke="#BA7517" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="486" cy="329" rx="4" ry="10" fill="#EF9F27" transform="rotate(10 486 329)"/>
+    <ellipse cx="482" cy="341" rx="3" ry="7" fill="#EF9F27" transform="rotate(15 482 341)"/>
+    <ellipse cx="490" cy="341" rx="3" ry="7" fill="#EF9F27" transform="rotate(-15 490 341)"/>
+
+    <!-- Tree left -->
+    <rect x="154" y="360" width="6" height="40" rx="2" fill="#854F0B"/>
+    <ellipse cx="157" cy="350" rx="18" ry="22" fill="#3B6D11"/>
+    <ellipse cx="148" cy="358" rx="12" ry="16" fill="#3B6D11"/>
+    <ellipse cx="167" cy="358" rx="12" ry="16" fill="#3B6D11"/>
+
+    <!-- Tree right -->
+    <rect x="520" y="360" width="6" height="40" rx="2" fill="#854F0B"/>
+    <ellipse cx="523" cy="350" rx="18" ry="22" fill="#3B6D11"/>
+    <ellipse cx="514" cy="358" rx="12" ry="16" fill="#3B6D11"/>
+    <ellipse cx="532" cy="358" rx="12" ry="16" fill="#3B6D11"/>
+  </g>
+
+  <!-- Inner decorative ring -->
+  <circle cx="340" cy="260" r="220" fill="none" stroke="#639922" stroke-width="2.5" opacity="0.4"/>
+
+  <!-- Label band bottom -->
+  <path d="M 134 400 A 220 220 0 0 0 546 400" fill="#3B6D11" clip-path="url(#circle-clip)"/>
+
+  <!-- Company name -->
+  <text x="340" y="455" text-anchor="middle" font-size="17" font-weight="500" font-family="Georgia, serif" fill="#F5F0E8" letter-spacing="3">MALYANNA FARM</text>
+  <text x="340" y="476" text-anchor="middle" font-size="11" font-family="Georgia, serif" fill="#C0DD97" letter-spacing="5" opacity="0.85">EST. 2024</text>
+
+  <!-- Leaf decorations -->
+  <ellipse cx="174" cy="450" rx="8" ry="4" fill="#97C459" transform="rotate(-30 174 450)" opacity="0.8"/>
+  <ellipse cx="506" cy="450" rx="8" ry="4" fill="#97C459" transform="rotate(30 506 450)" opacity="0.8"/>
+</svg>
