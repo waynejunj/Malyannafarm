@@ -219,11 +219,11 @@ const Signup = () => {
                                     </Link>
                                 </p>
 
-                                <p className="text-center text-muted small mt-2">
+                                {/* <p className="text-center text-muted small mt-2">
                                     By creating an account, you agree to our 
                                     <a href="#" className="text-success text-decoration-none"> Terms of Service</a> and 
                                     <a href="#" className="text-success text-decoration-none"> Privacy Policy</a>
-                                </p>
+                                </p> */}
                             </form>
                         </div>
                     </div>
