@@ -21,7 +21,7 @@ const Makepayment = () => {
             formdata.append("phone", phone)
             formdata.append("amount", product.product_cost)
 
-            const response = await axios.post("https://kbenkamotho.alwaysdata.net/api/mpesa_payment", formdata)
+            const response = await axios.post("https://wangui-hsk.alwaysdata.net/api/mpesa_payment", formdata)
             setSuccess(response.data.message)
             setLoading("")
             setPhone("")
