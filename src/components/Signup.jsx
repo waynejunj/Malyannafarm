@@ -25,7 +25,7 @@ const Signup = () => {
             formData.append("password", password)
             formData.append("phone", phone)
 
-            const response = await axios.post("http://wangui-hsk.alwaysdata.net/api/signup", formData)
+            const response = await axios.post("https://wangui-hsk.alwaysdata.net/api/signup", formData)
 
             setLoading("")
             setSuccess(response.data.success)

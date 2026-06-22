@@ -34,7 +34,7 @@ const handlesubmit = async (e) => {
 
       // Step 10 : Interact with the axios module
       // const response =
-      await axios.post("http://wangui-hsk.alwaysdata.net/api/addproduct", formdata)
+      await axios.post("https://wangui-hsk.alwaysdata.net/api/addproduct", formdata)
 
       // Step 11 : Setback the loading hook to default
       setLoading("")
