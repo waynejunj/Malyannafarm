@@ -73,39 +73,39 @@ const Getproducts = () => {
               </span>
           </div>
 
-          <div className="row g-4">
+          <div className="row g-2 g-sm-3 g-md-4">
               {products.map((product, index) => (
-                  <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={index}>
-                      <div className='card h-100 border-0 shadow-sm hover-card transition-all' 
-                            style={{ borderRadius: '16px', overflow: 'hidden' }}>
+                  <div className="col-6 col-sm-6 col-md-4 col-lg-3" key={index}>
+                      <div className='card h-100 border-0 shadow-sm hover-card transition-all'
+                            style={{ borderRadius: '12px', overflow: 'hidden' }}>
                           <div className="position-relative">
-                              <img 
-                                  src={img_url + product.product_photo} 
+                              <img
+                                  src={img_url + product.product_photo}
                                   alt={product.product_name}
                                   className='card-img-top product-img'
-                                  style={{ height: '220px', objectFit: 'cover' }}
+                                  style={{ height: 'clamp(140px, 30vw, 220px)', objectFit: 'cover' }}
                               />
-                              <span className="position-absolute top-0 end-0 m-3 bg-success text-white px-3 py-1 rounded-pill small">
+                              <span className="position-absolute top-0 end-0 m-2 bg-success text-white px-2 py-1 rounded-pill small">
                                   <i className="bi bi-tag-fill me-1"></i>
                                   New
                               </span>
                           </div>
-                          
-                          <div className='card-body p-3'>
-                              <h5 className='card-title fw-bold text-truncate'>{product.product_name}</h5>
-                              <p className="card-text text-muted small mb-2" style={{ minHeight: '40px' }}>
-                                  {product.product_description.slice(0, 60)}...
+
+                          <div className='card-body p-2 p-sm-3'>
+                              <h5 className='card-title fw-bold text-truncate small'>{product.product_name}</h5>
+                              <p className="card-text text-muted small mb-2 d-none d-sm-block" style={{ minHeight: '32px' }}>
+                                  {product.product_description.slice(0, 50)}...
                               </p>
                               <div className="d-flex justify-content-between align-items-center mt-2">
-                                  <h4 className="text-success fw-bold mb-0">
+                                  <h5 className="text-success fw-bold mb-0 small">
                                       <span className="small fw-normal text-muted">Kes</span> {product.product_cost}
-                                  </h4>
-                                  {/* Buy Now Button - Updated */}
-                                  <button 
-                                      className="btn btn-success btn-sm rounded-pill px-3 hover-btn"
+                                  </h5>
+                                  <button
+                                      className="btn btn-success btn-sm rounded-pill px-2 px-sm-3"
                                       onClick={() => handleBuyNow(product)}
                                   >
-                                      <i className="bi bi-cart-check me-1"></i> Buy Now
+                                      <i className="bi bi-cart-check me-1"></i>
+                                      <span className="d-none d-sm-inline">Buy Now</span>
                                   </button>
                               </div>
                           </div>
