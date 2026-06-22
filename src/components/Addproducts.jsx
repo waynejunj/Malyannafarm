@@ -1,4 +1,4 @@
-// import axios from 'axios'
+import axios from 'axios'
 import React, { useState } from 'react'
 
 const Addproducts = () => {
@@ -33,7 +33,7 @@ const handlesubmit = async (e) => {
       formdata.append("photo", product_photo)
 
       // Step 10 : Interact with the axios module
-      // const response = await axios.post("http://wangui-hsk.alwaysdata.net/api/addproduct", formdata)
+      const response = await axios.post("http://wangui-hsk.alwaysdata.net/api/addproduct", formdata)
 
       // Step 11 : Setback the loading hook to default
       setLoading("")
