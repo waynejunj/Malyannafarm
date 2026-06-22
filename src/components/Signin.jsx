@@ -7,7 +7,6 @@ const Signin = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [loading, setLoading] = useState("")
-    const [success, setSuccess] = useState("")
     const [error, setError] = useState("")
 
     const navigate = useNavigate()
@@ -38,61 +37,52 @@ const Signin = () => {
     }
 
     return (
-        <div className="container-fluid px-4" style={{ paddingTop: '80px' }}>
+        <div className="container-fluid px-3 px-md-4" style={{ paddingTop: '80px' }}>
             <div className='row justify-content-center'>
-                <div className='col-md-8 col-lg-6 col-xl-5'>
+                <div className='col-12 col-md-8 col-lg-6 col-xl-5'>
                     <div className="card border-0 shadow-lg rounded-4 overflow-hidden">
-                        
+
                         {/* Header with Logo */}
-                        <div className="bg-success p-4 text-center position-relative">
-                            {/* Decorative elements */}
+                        <div className="bg-success p-3 p-md-4 text-center position-relative">
                             <div className="position-absolute top-0 start-0 w-100 h-100" style={{
                                 background: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%)',
                                 pointerEvents: 'none'
                             }}></div>
-                            
-                            {/* Logo Image */}
-                            <div className="d-flex justify-content-center mb-3">
-                                <img 
-                                    src="/malyanna_farm_icon.svg" 
-                                    alt="Malyanna Farm" 
+
+                            <div className="d-flex justify-content-center mb-2 mb-md-3">
+                                <img
+                                    src="/malyanna_farm_icon.svg"
+                                    alt="Malyanna Farm"
                                     className="shadow-lg"
-                                    style={{ 
-                                        width: '80px', 
-                                        height: '80px',
+                                    style={{
+                                        width: '60px',
+                                        height: '60px',
+                                        maxWidth: '80px',
+                                        maxHeight: '80px',
                                         borderRadius: '50%',
                                         background: 'white',
-                                        padding: '8px',
-                                        transition: 'all 0.3s ease',
-                                        boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+                                        padding: '6px'
                                     }}
                                 />
                             </div>
-                            
-                            <h2 className="text-white fw-bold mb-0">Welcome Back</h2>
-                            <p className="text-white-50 mb-0">Sign in to your account</p>
+
+                            <h2 className="text-white fw-bold mb-0 h4 h-md-2">Welcome Back</h2>
+                            <p className="text-white-50 mb-0 small">Sign in to your account</p>
                         </div>
 
                         {/* Form */}
-                        <div className="p-4 p-md-5">
+                        <div className="p-3 p-md-4 p-lg-5">
                             {loading && (
-                                <div className="alert alert-info border-0 d-flex align-items-center gap-2">
+                                <div className="alert alert-info border-0 d-flex align-items-center gap-2 py-2">
                                     <div className="spinner-border spinner-border-sm text-info" role="status">
                                         <span className="visually-hidden">Loading...</span>
                                     </div>
                                     {loading}
                                 </div>
                             )}
-                            
-                            {success && (
-                                <div className="alert alert-success border-0 d-flex align-items-center gap-2">
-                                    <i className="bi bi-check-circle-fill"></i>
-                                    {success}
-                                </div>
-                            )}
-                            
+
                             {error && (
-                                <div className="alert alert-danger border-0 d-flex align-items-center gap-2">
+                                <div className="alert alert-danger border-0 d-flex align-items-center gap-2 py-2">
                                     <i className="bi bi-exclamation-circle-fill"></i>
                                     {error}
                                 </div>
@@ -100,51 +90,51 @@ const Signin = () => {
 
                             <form onSubmit={handlesubmit}>
                                 <div className="mb-3">
-                                    <label className="form-label fw-semibold">
+                                    <label className="form-label fw-semibold small">
                                         <i className="bi bi-envelope me-1"></i> Email Address
                                     </label>
                                     <div className="input-group">
                                         <span className="input-group-text bg-light border-0">
                                             <i className="bi bi-envelope"></i>
                                         </span>
-                                        <input 
+                                        <input
                                             type="email"
                                             placeholder="Enter your email"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
-                                            className="form-control form-control-lg border-0 shadow-sm"
+                                            className="form-control border-0 shadow-sm"
                                             style={{ background: '#f8f9fa' }}
                                             required
                                         />
                                     </div>
                                 </div>
 
-                                <div className="mb-4">
+                                <div className="mb-3 mb-md-4">
                                     <div className="d-flex justify-content-between">
-                                        <label className="form-label fw-semibold">
+                                        <label className="form-label fw-semibold small">
                                             <i className="bi bi-lock me-1"></i> Password
                                         </label>
-                                        <a href="#" className="text-success text-decoration-none small">Forgot Password?</a>
+                                        <button type="button" className="btn btn-link text-success text-decoration-none small p-0">Forgot?</button>
                                     </div>
                                     <div className="input-group">
                                         <span className="input-group-text bg-light border-0">
                                             <i className="bi bi-lock"></i>
                                         </span>
-                                        <input 
+                                        <input
                                             type="password"
                                             placeholder="Enter your password"
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
-                                            className="form-control form-control-lg border-0 shadow-sm"
+                                            className="form-control border-0 shadow-sm"
                                             style={{ background: '#f8f9fa' }}
                                             required
                                         />
                                     </div>
                                 </div>
 
-                                <button 
-                                    type="submit" 
-                                    className="btn btn-success btn-lg w-100 rounded-pill py-3 fw-bold shadow-sm hover-shadow"
+                                <button
+                                    type="submit"
+                                    className="btn btn-success w-100 rounded-pill py-2 py-md-3 fw-bold shadow-sm"
                                     disabled={loading}
                                 >
                                     {loading ? (
@@ -160,7 +150,7 @@ const Signin = () => {
                                     )}
                                 </button>
 
-                                <p className="text-center text-muted mt-3">
+                                <p className="text-center text-muted mt-3 small">
                                     Don't have an account?{' '}
                                     <Link to="/signup" className="text-success fw-bold text-decoration-none">
                                         Register Here
@@ -172,24 +162,6 @@ const Signin = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Custom CSS */}
-            <style jsx>{`
-                .hover-shadow:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3) !important;
-                }
-                .form-control:focus {
-                    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
-                    border-color: #28a745;
-                }
-                img {
-                    transition: transform 0.3s ease;
-                }
-                img:hover {
-                    transform: scale(1.05);
-                }
-            `}</style>
         </div>
     )
 }

@@ -49,22 +49,22 @@ const Makepayment = () => {
     }
 
     return (
-        <div className="container-fluid px-4" style={{ paddingTop: '80px' }}>
+        <div className="container-fluid px-3 px-md-4" style={{ paddingTop: '80px' }}>
             <div className='row justify-content-center'>
-                <div className="col-lg-10 col-xl-8">
+                <div className="col-12 col-lg-10 col-xl-8">
                     <div className="card border-0 shadow-lg overflow-hidden">
                         <div className="row g-0">
 
-                            {/* Product Image */}
-                            <div className="col-md-6 bg-light d-flex align-items-center" style={{ minHeight: '400px' }}>
-                                <div className="p-4 w-100">
-                                    <img 
-                                        src={img_url + product.product_photo} 
+                            {/* Product Image - hidden on mobile, shown on md+ */}
+                            <div className="d-none d-md-block col-md-6 bg-light align-items-center" style={{ minHeight: '400px' }}>
+                                <div className="p-4 w-100 h-100 d-flex align-items-center justify-content-center">
+                                    <img
+                                        src={img_url + product.product_photo}
                                         alt={product.product_name}
                                         className='img-fluid rounded-3 shadow-sm'
-                                        style={{ 
-                                            maxHeight: '450px', 
-                                            width: '100%', 
+                                        style={{
+                                            maxHeight: '450px',
+                                            width: '100%',
                                             objectFit: 'cover',
                                             borderRadius: '12px'
                                         }}
@@ -73,82 +73,90 @@ const Makepayment = () => {
                             </div>
 
                             {/* Payment Form */}
-                            <div className="col-md-6 p-4 p-md-5">
-                                <div className="d-flex justify-content-between align-items-start mb-4">
-                                    <button 
-                                        onClick={() => navigate("/")} 
+                            <div className="col-12 col-md-6 p-3 p-md-4 p-lg-5">
+                                {/* Mobile product image */}
+                                <div className="d-md-none mb-3 text-center">
+                                    <img
+                                        src={img_url + product.product_photo}
+                                        alt={product.product_name}
+                                        className='img-fluid rounded-3 shadow-sm'
+                                        style={{ maxHeight: '200px', objectFit: 'cover' }}
+                                    />
+                                </div>
+
+                                <div className="d-flex justify-content-between align-items-start mb-3 mb-md-4">
+                                    <button
+                                        onClick={() => navigate("/")}
                                         className="btn btn-outline-secondary btn-sm rounded-pill px-3"
                                     >
-                                        <i className="bi bi-arrow-left me-1"></i> Back
+                                        <i className="bi bi-arrow-left me-1"></i> <span className="d-none d-sm-inline">Back</span>
                                     </button>
-                                    <span className="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill">
-                                        <i className="bi bi-shield-check me-1"></i> Secure Payment
+                                    <span className="badge bg-success bg-opacity-10 text-success px-2 px-md-3 py-2 rounded-pill small">
+                                        <i className="bi bi-shield-check me-1"></i> Secure
                                     </span>
                                 </div>
 
-                                <h2 className="fw-bold mb-2">{product.product_name}</h2>
-                                <p className="text-muted small">{product.product_description}</p>
+                                <h2 className="fw-bold mb-2 h4 h-md-2">{product.product_name}</h2>
+                                <p className="text-muted small mb-3">{product.product_description}</p>
 
-                                <div className="d-flex align-items-baseline mb-4">
-                                    <span className="display-4 fw-bold text-success">Kes {product.product_cost}</span>
-                                    <span className="text-muted ms-2">
-                                        <i className="bi bi-tag"></i>
-                                    </span>
+                                <div className="d-flex align-items-baseline mb-3 mb-md-4">
+                                    <span className="h2 h-md-1 fw-bold text-success">Kes {product.product_cost}</span>
+                                    <i className="bi bi-tag text-muted ms-2"></i>
                                 </div>
 
-                                <div className="alert alert-info border-0 rounded-3 py-2 px-3 d-flex align-items-center gap-2">
+                                <div className="alert alert-info border-0 rounded-3 py-2 px-3 d-flex align-items-center gap-2 mb-3 mb-md-4">
                                     <i className="bi bi-info-circle-fill"></i>
-                                    <small>You will receive a prompt on your phone to complete payment</small>
+                                    <small>You will receive an M-Pesa prompt on your phone</small>
                                 </div>
 
                                 <form onSubmit={payment}>
                                     {loading && (
-                                        <div className="alert alert-info border-0 d-flex align-items-center gap-2">
+                                        <div className="alert alert-info border-0 d-flex align-items-center gap-2 py-2">
                                             <div className="spinner-border spinner-border-sm text-info" role="status">
                                                 <span className="visually-hidden">Loading...</span>
                                             </div>
                                             {loading}
                                         </div>
                                     )}
-                                    
+
                                     {success && (
-                                        <div className="alert alert-success border-0 d-flex align-items-center gap-2">
+                                        <div className="alert alert-success border-0 d-flex align-items-center gap-2 py-2">
                                             <i className="bi bi-check-circle-fill"></i>
                                             {success}
                                         </div>
                                     )}
-                                    
+
                                     {error && (
-                                        <div className="alert alert-danger border-0 d-flex align-items-center gap-2">
+                                        <div className="alert alert-danger border-0 d-flex align-items-center gap-2 py-2">
                                             <i className="bi bi-exclamation-circle-fill"></i>
                                             {error}
                                         </div>
                                     )}
 
                                     <div className="mb-3">
-                                        <label className="form-label fw-semibold">
+                                        <label className="form-label fw-semibold small">
                                             <i className="bi bi-phone me-1"></i> M-Pesa Phone Number
                                         </label>
                                         <div className="input-group">
                                             <span className="input-group-text bg-light border-0">
                                                 <i className="bi bi-phone"></i>
                                             </span>
-                                            <input 
+                                            <input
                                                 type="tel"
                                                 placeholder="e.g., 0712345678"
-                                                className="form-control form-control-lg border-0 shadow-sm"
+                                                className="form-control border-0 shadow-sm"
                                                 value={phone}
                                                 onChange={(e) => setPhone(e.target.value)}
                                                 required
                                                 style={{ background: '#f8f9fa' }}
                                             />
                                         </div>
-                                        <small className="text-muted">Enter the M-Pesa registered number</small>
+                                        <small className="text-muted">Enter M-Pesa registered number</small>
                                     </div>
 
-                                    <button 
-                                        type="submit" 
-                                        className="btn btn-success btn-lg w-100 rounded-pill py-3 fw-bold shadow-sm hover-shadow"
+                                    <button
+                                        type="submit"
+                                        className="btn btn-success w-100 rounded-pill py-2 py-md-3 fw-bold shadow-sm"
                                         disabled={loading}
                                     >
                                         {loading ? (
@@ -164,7 +172,7 @@ const Makepayment = () => {
                                         )}
                                     </button>
 
-                                    <p className="text-center text-muted small mt-3">
+                                    <p className="text-center text-muted small mt-2 mt-md-3">
                                         <i className="bi bi-shield-lock-fill me-1"></i>
                                         Secured by M-Pesa
                                     </p>
@@ -175,7 +183,7 @@ const Makepayment = () => {
                     </div>
 
                     {/* Security Badges */}
-                    <div className="d-flex justify-content-center gap-4 mt-4">
+                    <div className="d-flex flex-wrap justify-content-center gap-3 gap-md-4 mt-3 mt-md-4">
                         <div className="d-flex align-items-center gap-2 text-muted small">
                             <i className="bi bi-check-circle-fill text-success"></i>
                             SSL Secure
@@ -191,21 +199,6 @@ const Makepayment = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Custom CSS */}
-            <style jsx>{`
-                .hover-shadow:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3) !important;
-                }
-                .form-control:focus {
-                    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
-                    border-color: #28a745;
-                }
-                .btn-outline-secondary:hover {
-                    background: #f8f9fa;
-                }
-            `}</style>
         </div>
     )
 }

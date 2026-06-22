@@ -58,7 +58,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className={`navbar-toggler border-0 ${isScrolled ? 'text-dark' : 'text-white'}`}
+          className={`navbar-toggler border-0 ${isScrolled ? 'navbar-toggler-default' : 'navbar-toggler-white'}`}
           type='button'
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
